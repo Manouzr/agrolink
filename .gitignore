@@ -1,0 +1,12 @@
+.DS_Store
+*.zip
+*.rar
+*.mov
+*.mp4
+*.pyc
+__pycache__/
+*.pkl
+*.keras
+venv/
+env/
+.env

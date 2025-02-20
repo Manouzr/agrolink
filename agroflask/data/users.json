@@ -1,0 +1,12 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Agro",
+            "email": "caca@gmail.com",
+            "password": "caca@gmail.com1",
+            "totp_secret": "MZONKQHOUUFQ5UCCFBVIJJBJY34LR4LH",
+            "totp_enabled": true
+        }
+    ]
+}

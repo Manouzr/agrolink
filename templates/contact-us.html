@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrolink</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <!--- End favicon-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <!-- End google font  -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/custom-font.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/aos.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/icomoon.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/app.min.css') }}">
+</head>
+
+<body class="light">
+
+  <div class="aximo-preloader-wrap">
+    <div class="aximo-preloader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+
+
+
+  <header class="site-header aximo-header-section aximo-header1 dark-bg" id="sticky-menu">
+    <div class="container">
+      <nav class="navbar site-navbar">
+        <!-- Brand Logo-->
+        <div class="brand-logo">
+          <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='assets/images/logo/logo-white.svg') }}" alt="" class="light-version-logo">
+          </a>
+        </div>
+        <div class="menu-block-wrapper">
+          <div class="menu-overlay"></div>
+          <nav class="menu-block" id="append-menu-header">
+            <div class="mobile-menu-head">
+              <div class="go-back">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="site-menu-main">
+              <li class="nav-item">
+                <a href="{{ url_for('index') }}" class="nav-link-item">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('pricing') }}" class="nav-link-item">Tarifs</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('about') }}" class="nav-link-item">A propos de nous</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('contact') }}" class="nav-link-item">Contactez-nous</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
+          <a class="aximo-default-btn pill aximo-header-btn" href="{{ url_for('contact') }}">
+            Contactez-nous
+          </a>
+        </div>
+        <!-- mobile menu trigger -->
+        <div class="mobile-menu-trigger light">
+          <span></span>
+        </div>
+        <!--/.Mobile Menu Hamburger Ends-->
+      </nav>
+    </div>
+  </header>
+  <!--End landex-header-section -->
+
+  <div class="aximo-breadcrumb">
+    <div class="container">
+      <h1 class="post__title">Contactez-nous</h1>
+      <nav class="breadcrumbs">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Accueil</a></li>
+          <li aria-current="page"> Contactez-nous</li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+  <!-- End breadcrumb -->
+
+  <div class="section aximo-section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="aximo-section-title">
+            <h2>
+              <span class="aximo-title-animation">
+              Contactez-nous pour
+              <span class="aximo-title-icon">
+                <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+              </span>
+              </span>
+              plus de questions
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5 order-lg-2">
+          <div class="aximo-contact-thumb wow fadeInRight" data-wow-delay="0.1s">
+            <img src="{{ url_for('static', filename='assets/images/contact/contact-thumb.png') }}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="aximo-main-form">
+            <form action="#">
+              <div class="aximo-main-field">
+                <label>Votre nom</label>
+                <input type="text">
+              </div>
+              <div class="aximo-main-field">
+                <label>Adresse E-mail</label>
+                <input type="email">
+              </div>
+              <div class="aximo-main-field">
+                <label>Numeros de telephone</label>
+                <input type="text">
+              </div>
+              <div class="aximo-main-field">
+                <label>Ecrivez votre message ici...</label>
+                <textarea name="textarea"></textarea>
+              </div>
+              <button id="aximo-main-btn" type="submit">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="aximo-contact-info-section">
+    <div class="container">
+      <div class="aximo-contact-info-title">
+        <h2>
+          <span class="aximo-title-animation">
+          Informations de contact
+          <span class="aximo-title-icon">
+            <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+          </span>
+          </span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <a href="">
+            <div class="aximo-contact-info-box wow fadeInUpX" data-wow-delay="0.1s">
+              <div class="aximo-contact-info-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/call2.svg') }}" alt="">
+              </div>
+              <div class="aximo-contact-info-data">
+                <span>Nous appeler</span>
+                <p>+336 12 34 56 78</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <a href="">
+            <div class="aximo-contact-info-box wow fadeInUpX" data-wow-delay="0.2s">
+              <div class="aximo-contact-info-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/email.svg') }}" alt="">
+              </div>
+              <div class="aximo-contact-info-data">
+                <span>Envoyez un email</span>
+                <p>agrolink@gmail.com</p>
+                <p>agrolink@gmail.com</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="aximo-contact-info-box wow fadeInUpX" data-wow-delay="0.3s">
+            <div class="aximo-contact-info-icon">
+              <img src="{{ url_for('static', filename='assets/images/icon/map.svg') }}" alt="">
+            </div>
+            <div class="aximo-contact-info-data">
+              <span>Adresse</span>
+              <p>99 Rue de Talant, 21000 Dijon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <div class="section">
+    <div class="container">
+      <div class="aximo-map-wrap">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end section -->
+
+  <div class="section aximo-section-padding">
+    <div class="container">
+      <div class="aximo-section-title center">
+        <h2>
+          Questions fréquentes sur
+          <span class="aximo-title-animation">
+          notre service
+          <span class="aximo-title-icon">
+            <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+          </span>
+          </span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="aximo-accordion-normal-wrap responsive-margin">
+            <div class="aximo-accordion-normal-item">
+              <div class="aximo-accordion-normal-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/question.svg') }}" alt="">
+              </div>
+              <div class="aximo-accordion-normal-data">
+                <h3>Comment fonctionne votre système de prédiction ?</h3>
+                <p>Notre système utilise l'intelligence artificielle pour analyser les données historiques, les tendances du marché et les facteurs externes afin de prédire les prix agricoles avec précision.</p>
+              </div>
+            </div>
+            <div class="aximo-accordion-normal-item">
+              <div class="aximo-accordion-normal-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/question.svg') }}" alt="">
+              </div>
+              <div class="aximo-accordion-normal-data">
+                <h3>Quels produits agricoles sont couverts ?</h3>
+                <p>Nous couvrons une large gamme de produits : céréales, oléagineux, fruits et légumes, produits laitiers et viande. La liste est régulièrement mise à jour selon les besoins du marché.</p>
+              </div>
+            </div>
+            <div class="aximo-accordion-normal-item">
+              <div class="aximo-accordion-normal-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/question.svg') }}" alt="">
+              </div>
+              <div class="aximo-accordion-normal-data">
+                <h3>Quel est le coût du service ?</h3>
+                <p>Nos tarifs varient selon vos besoins. Nous proposons des forfaits adaptés aux petits producteurs comme aux grandes exploitations. Consultez notre page Tarifs pour plus de détails.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="aximo-accordion-normal-wrap">
+            <div class="aximo-accordion-normal-item">
+              <div class="aximo-accordion-normal-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/question.svg') }}" alt="">
+              </div>
+              <div class="aximo-accordion-normal-data">
+                <h3>Comment sont gérées les alertes de prix ?</h3>
+                <p>Vous recevez des notifications personnalisées en temps réel lorsque les prix atteignent vos seuils définis ou quand des opportunités de marché se présentent.</p>
+              </div>
+            </div>
+            <div class="aximo-accordion-normal-item">
+              <div class="aximo-accordion-normal-icon">
+                <img src="{{ url_for('static', filename='assets/images/icon/question.svg') }}" alt="">
+              </div>
+              <div class="aximo-accordion-normal-data">
+                <h3>Quelle est la précision des prédictions ?</h3>
+                <p>Notre IA atteint un taux de précision moyen de 85-90% sur les prédictions à court terme. Les résultats historiques et les métriques de performance sont disponibles dans votre tableau de bord.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+
+  <!-- Footer  -->
+
+
+  <footer class="aximo-footer-section dark-bg">
+    <div class="container">
+      <div class="aximo-footer-top aximo-section-padding">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="aximo-default-content light position-relative">
+              <h2>
+                <span class="aximo-title-animation">
+                  Intéressé ? 
+                 
+                </span>
+                 Contactez-nous 
+              </h2>
+              <p>Notre solution d'intelligence artificielle vous permet d'optimiser la gestion de votre exploitation agricole en prenant des décisions éclairées basées sur des données précises et actualisées.</p>
+              <div class="aximo-info-wrap">
+                <div class="aximo-info">
+                  <ul>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Anticipez les variations de prix pour vendre au meilleur moment</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Optimisez vos coûts d'achat d'intrants agricoles</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Recevez des alertes personnalisées sur les opportunités du marché</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Bénéficiez d'analyses détaillées des tendances du marché</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="aximo-social-icon social-large">
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="icon-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://facebook.com/" target="_blank">
+                      <i class="icon-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <i class="icon-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                      <i class="icon-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="aximo-hero-shape aximo-footer-shape">
+                <img src="{{ url_for('static', filename='assets/images/v1/shape1.png') }}" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="aximo-form-wrap">
+              <h4>Envoyez-nous un message</h4>
+              <form action="#">
+                <div class="aximo-form-field">
+                  <input type="text" placeholder="Votre nom">
+                </div>
+                <div class="aximo-form-field">
+                  <input type="email" placeholder="Votre adresse e-mail">
+                </div>
+                <div class="aximo-form-field">
+                  <input type="text" placeholder="+33 6 78 56 34 12">
+                </div>
+                <div class="aximo-form-field">
+                  <textarea name="textarea" placeholder="Ecrivez votre message ici..."></textarea>
+                </div>
+                <button id="aximo-submit-btn" type="submit">Envoyer le message <span><img src="{{ url_for('static', filename='assets/images/icon/arrow-right3.svg') }}" alt=""></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aximo-footer-bottom">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="aximo-footer-logo">
+              <a href="">
+                <img src="{{ url_for('static', filename='assets/images/logo/logo-white.svg') }}" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-copywright one">
+              <p> &copy; Copyright 2025, All Rights Reserved by Agrolink</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/menu/menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/gsap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/countdown.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/SplitText.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/ScrollTrigger.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/ScrollSmoother.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skill-bar.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/infinite-slider.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/image-resizing.js') }}"></script>
+  <!-- <script src="assets/js/scrollsmooth.js"></script> -->
+  <script src="{{ url_for('static', filename='assets/js/faq.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
+
+  <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+
+
+</body>
+</html>

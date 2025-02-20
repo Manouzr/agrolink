@@ -1,0 +1,60 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Agro",
+            "email": "caca@gmail.com",
+            "password": "caca@gmail.com1",
+            "totp_secret": "MZONKQHOUUFQ5UCCFBVIJJBJY34LR4LH",
+            "totp_enabled": true
+        },
+        {
+            "id": 2,
+            "name": "agri 1",
+            "email": "test@gmail.com",
+            "password": "test@gmail.com",
+            "totp_secret": "CJ3GU2KCSUJEDSVFWNIFZOMJLCY452GS",
+            "totp_enabled": false
+        },
+        {
+            "id": 3,
+            "name": "test",
+            "email": "testst@gmail.com",
+            "password": "testst@gmail.com",
+            "totp_secret": "UXFNCACWGNYBKZJHGZYUTR6CNWTOXGA3",
+            "totp_enabled": false
+        },
+        {
+            "id": 4,
+            "name": "sfidji",
+            "email": "cshs@gmail.com",
+            "password": "cshs@gmail.com",
+            "totp_secret": "LUPBPCIK3C4LVYFB4TDN5STYWPVMLHHK",
+            "totp_enabled": true
+        },
+        {
+            "id": 5,
+            "name": "hakim",
+            "email": "cgdcgiudd@gmail.com",
+            "password": "cgdcgiudd@gmail.com",
+            "totp_secret": "IP4NEOF7Z5CGPQIGDAIUIY7WISOJHYVQ",
+            "totp_enabled": true
+        },
+        {
+            "id": 6,
+            "name": "cdocmd cdmcd",
+            "email": "tes2t@gmail.com",
+            "password": "tes2t@gmail.com",
+            "totp_secret": "AK6HZXSBBEDD7TYJFLOMKPM3VSO7OUGK",
+            "totp_enabled": false
+        },
+        {
+            "id": 7,
+            "name": "Caca prouteur",
+            "email": "123@gmail.com",
+            "password": "123@gmail.com",
+            "totp_secret": "B3NDCAGZRSVF6UOS6ETE5E2E3G5477A5",
+            "totp_enabled": true
+        }
+    ]
+}

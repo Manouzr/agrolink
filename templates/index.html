@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrolink</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}" type="image/x-icon">
+  <!--- End favicon-->
+
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <!-- End google font  -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/custom-font.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/aos.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/icomoon.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+  <!-- Code Editor  -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/app.min.css') }}">
+</head>
+
+
+
+
+  <header class="site-header aximo-header-section aximo-header1 dark-bg" id="sticky-menu">
+    <div class="container">
+      <nav class="navbar site-navbar">        
+        <div class="menu-block-wrapper">
+          <div class="menu-overlay"></div>
+          <nav class="menu-block" id="append-menu-header">
+            <div class="mobile-menu-head">
+              <div class="go-back">
+                <i class="fa fa-angle-left"></i>
+              </div>
+              <div class="current-menu-title"></div>
+              <div class="mobile-menu-close">&times;</div>
+            </div>
+            <ul class="site-menu-main">
+              <li class="nav-item">
+                <a href="{{ url_for('index') }}" class="nav-link-item">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('pricing') }}" class="nav-link-item">Tarifs</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('about') }}" class="nav-link-item">A propos de nous</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('contact') }}" class="nav-link-item">Contactez-nous</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-btn header-btn-l1 ms-auto d-none d-xs-inline-flex">
+          <a class="aximo-default-btn pill aximo-header-btn" href="{{ url_for('login') }}">
+            Se connecter
+          </a>
+        </div>
+        <!-- mobile menu trigger -->
+        <div class="mobile-menu-trigger light">
+          <span></span>
+        </div>
+        <!--/.Mobile Menu Hamburger Ends-->
+      </nav>
+    </div>
+  </header>
+  <!--End landex-header-section -->
+
+
+
+  <div class="aximo-hero-section dark-bg">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="aximo-hero-content">
+            <h1>
+              <span class="aximo-title-animation">
+                AGROLINK
+                <img src="{{ url_for('static', filename='assets/images/v1/star.png') }}" alt="">
+              </span>
+              entre tradition et innovation
+            </h1>
+            <p>AGROLINK révolutionne le secteur agricole en utilisant l'intelligence artificielle pour prédire les prix des produits agricoles. Notre technologie de pointe analyse les données du marché en temps réel pour fournir des prévisions précises, aidant les agriculteurs et les professionnels à prendre des décisions éclairées.</p>
+            <div class="aximo-hero-user-wrap">
+              <div class="aximo-hero-user-thumb">
+                <div class="aximo-hero-user-thumb-item wow fadeInUpX" data-wow-delay="0s">
+                  <img src="{{ url_for('static', filename='assets/images/v1/user1.png') }}" alt="">
+                </div>
+                <div class="aximo-hero-user-thumb-item wow fadeInUpX" data-wow-delay="0.25s">
+                  <img src="{{ url_for('static', filename='assets/images/v1/user3.png') }}" alt="">
+                </div>
+                <div class="aximo-hero-user-thumb-item wow fadeInUpX" data-wow-delay="0.4s">
+                  <img src="{{ url_for('static', filename='assets/images/v1/user2.png') }}" alt="">
+                </div>
+              </div>
+              <div class="aximo-hero-user-data">
+                <p>Des solutions innovantes pour une agriculture plus responsable</p>
+              </div>
+            </div>
+            <a class="aximo-call-btn" href="{{ url_for('signup') }}">S'inscrire</a>
+            <div class="aximo-hero-shape">
+              <img src="{{ url_for('static', filename='assets/images/v1/shape1.png') }}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="aximo-hero-thumb wow fadeInRight" data-wow-delay="0s">
+            <img src="{{ url_for('static', filename='assets/images/v1/hero-thumb.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section aximo-section-padding4">
+    <div class="container">
+      <div class="aximo-section-title center">
+        <h2>
+          Une solutions innovantes pour
+          <span class="aximo-title-animation">
+            l'agriculture de demain
+            <span class="aximo-title-icon">
+              <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div class="aximo-service-wrap">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="aximo-iconbox-wrap wow fadeInUpX" data-wow-delay="0.1s">
+              <div class="aximo-iconbox-icon">
+                <i class="icon-design-tools"></i>
+              </div>
+              <div class="aximo-iconbox-data">
+                <h3>Prédiction des Prix</h3>
+                <p>Notre IA analyse les tendances du marché, les données historiques et les facteurs externes pour prédire avec précision les prix des produits agricoles.</p>
+                <a class="aximo-icon" href="{{ url_for('pricing') }}"><img src="{{ url_for('static', filename='assets/images/icon/arrow-right.svg') }}" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-iconbox-wrap wow fadeInUpX" data-wow-delay="0.2s">
+              <div class="aximo-iconbox-icon">
+                <i class="icon-branding"></i>
+              </div>
+              <div class="aximo-iconbox-data">
+                <h3>Analyse de Marché</h3>
+                <p>Surveillance en temps réel des marchés agricoles mondiaux et analyse des facteurs influençant les prix pour des décisions éclairées.</p>
+                <a class="aximo-icon" href="{{ url_for('pricing') }}"><img src="{{ url_for('static', filename='assets/images/icon/arrow-right.svg') }}" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-iconbox-wrap wow fadeInUpX" data-wow-delay="0.3s">
+              <div class="aximo-iconbox-icon">
+                <i class="icon-web"></i>
+              </div>
+              <div class="aximo-iconbox-data">
+                <h3>Alertes Personnalisées</h3>
+                <p>Recevez des notifications en temps réel sur les variations de prix et les opportunités de marché selon vos critères personnalisés.</p>
+                <a class="aximo-icon" href="{{ url_for('pricing') }}"><img src="{{ url_for('static', filename='assets/images/icon/arrow-right.svg') }}" alt=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-iconbox-wrap wow fadeInUpX" data-wow-delay="0.4s">
+              <div class="aximo-iconbox-icon">
+                <i class="icon-design-thinking"></i>
+              </div>
+              <div class="aximo-iconbox-data">
+                <h3>Conseil Stratégique</h3>
+                <p>Recommandations personnalisées basées sur l'IA pour optimiser vos décisions d'achat et de vente de produits agricoles.</p>
+                <a class="aximo-icon" href="{{ url_for('pricing') }}"><img src="{{ url_for('static', filename='assets/images/icon/arrow-right.svg') }}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section aximo-section-padding">
+    <div id="aximo-counter"></div>
+    <div class="container">
+      <div class="aximo-section-title">
+        <div class="row">
+          <div class="col-lg-7">
+            <h2>
+              <span class="aximo-title-animation">
+                Prédictions précises
+                <span class="aximo-title-icon">
+                  <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+                </span>
+              </span>
+              pour votre succès
+            </h2>
+          </div>
+          <div class="col-lg-4 offset-lg-1 d-flex align-items-center">
+            <p>Notre entreprise est specialisée dans la prediction des prix des produits agricoles, l'analyse de marché, les alertes personnalisées et le conseil stratégique.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="aximo-video-wrap wow fadeInUpX" data-wow-delay="0s">
+            <img src="{{ url_for('static', filename='assets/images/v1/video-bg.png') }}" alt="">
+            <a class="aximo-video-popup play-btn1 video-init" href="https://www.youtube.com/watch?v=rien">
+              <img src="{{ url_for('static', filename='assets/images/v1/play-btn.svg') }}" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="aximo-counter-wrap">
+            <div class="aximo-counter-data">
+              <h2 class="aximo-counter-number"><span data-percentage="4" class="aximo-counter"></span>+</h2>
+              <p>Catégories d'analyse</p>
+            </div>
+            <div class="aximo-counter-data">
+              <h2 class="aximo-counter-number"><span data-percentage="12" class="aximo-counter"></span>k</h2>
+              <p>Données analysées par jour</p>
+            </div>
+            <div class="aximo-counter-data">
+              <h2 class="aximo-counter-number"><span data-percentage="95" class="aximo-counter"></span>%</h2>
+              <p>Précisions des résultats</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section dark-bg aximo-section-padding">
+    <div class="container">
+      <div class="aximo-section-title center light">
+        <h2>
+          Un outil innovant
+          <span class="aximo-title-animation">
+            boosté par IA
+            <span class="aximo-title-icon">
+              <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+            </span>
+          </span>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section">
+    <div class="container">
+      <div class="aximo-faq-wrap">
+        <div class="row">
+          <div class="col-lg-7 d-flex align-items-center">
+            <div class="aximo-default-content">
+              <h2>
+                <span class="aximo-title-animation">
+                  Architecture
+                  <span class="aximo-title-icon">
+                    <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+                  </span>
+                </span>
+                technique avancée
+              </h2>
+              <p>Notre système de prédiction utilise un modèle LSTM (Long Short-Term Memory) développé avec TensorFlow et Keras, permettant une analyse approfondie des séries temporelles de prix agricoles.</p>
+              <p>Cette architecture neuronale avancée permet de capturer les tendances à long terme et les variations saisonnières des prix, offrant des prédictions d'une précision exceptionnelle.</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="aximo-accordion-wrap wow fadeInUpX" data-wow-delay="0s" id="aximo-accordion">
+              <div class="aximo-accordion-item open">
+                <div class="aximo-accordion-header">
+                  <h3>01/ Collecte de données</h3>
+                </div>
+                <div class="aximo-accordion-body">
+                  <p>Acquisition et prétraitement des données historiques des prix agricoles, intégration des facteurs externes (météo, événements économiques, tendances du marché).</p>
+                </div>
+              </div>
+              <div class="aximo-accordion-item">
+                <div class="aximo-accordion-header">
+                  <h3>02/ Modèle LSTM</h3>
+                </div>
+                <div class="aximo-accordion-body">
+                  <p>Architecture neuronale profonde utilisant TensorFlow et Keras, avec des couches LSTM optimisées pour la prédiction de séries temporelles complexes.</p>
+                </div>
+              </div>
+              <div class="aximo-accordion-item">
+                <div class="aximo-accordion-header">
+                  <h3>03/ Analyse prédictive</h3>
+                </div>
+                <div class="aximo-accordion-body">
+                  <p>Génération de prédictions précises basées sur l'apprentissage continu du modèle, avec validation croisée et ajustement dynamique des paramètres.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section aximo-section-padding3">
+    <div class="container">
+      <div class="aximo-section-title center">
+        <h2>
+          La confiance de nos
+          <span class="aximo-title-animation">
+            partenaires agricoles
+            <span class="aximo-title-icon">
+              <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="aximo-testimonial-wrap wow fadeInUpX" data-wow-delay="0.1s">
+            <div class="aximo-testimonial-rating">
+              <ul>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+              </ul>
+            </div>
+            <div class="aximo-testimonial-data">
+              <h3>Prédictions fiables pour notre coopérative !</h3>
+              <p>Les prédictions d'AGROLINK nous ont permis d'optimiser nos décisions d'achat et de vente de céréales. La précision des prévisions est remarquable, et nous avons pu augmenter nos marges de 15% sur l'année dernière.</p>
+            </div>
+            <div class="aximo-testimonial-author">
+              <div class="aximo-testimonial-author-thumb">
+                <img src="{{ url_for('static', filename='assets/images/v1/t_thumb1.png') }}" alt="">
+              </div>
+              <div class="aximo-testimonial-author-data">
+                <p>Jean Dupont <span>Directeur Coopérative Agricole du Centre</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="aximo-testimonial-wrap wow fadeInUpX" data-wow-delay="0.2s">
+            <div class="aximo-testimonial-rating">
+              <ul>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+              </ul>
+            </div>
+            <div class="aximo-testimonial-data">
+              <h3>Un outil indispensable pour mon exploitation</h3>
+              <p>Grâce aux alertes personnalisées d'AGROLINK, je peux anticiper les variations de prix du marché. L'interface est simple à utiliser et les prédictions m'ont déjà évité plusieurs mauvaises décisions de vente.</p>
+            </div>
+            <div class="aximo-testimonial-author">
+              <div class="aximo-testimonial-author-thumb">
+                <img src="{{ url_for('static', filename='assets/images/v1/t_thumb2.png') }}" alt="">
+              </div>
+              <div class="aximo-testimonial-author-data">
+                <p>Marie Laurent <span>Agricultrice - Exploitation céréalière</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="aximo-testimonial-wrap wow fadeInUpX" data-wow-delay="0.3s">
+            <div class="aximo-testimonial-rating">
+              <ul>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+              </ul>
+            </div>
+            <div class="aximo-testimonial-data">
+              <h3>Une révolution pour notre groupement</h3>
+              <p>L'analyse prédictive d'AGROLINK nous aide à mieux planifier nos achats groupés. La précision des prévisions sur les prix des intrants nous permet d'optimiser nos coûts et de mieux conseiller nos adhérents.</p>
+            </div>
+            <div class="aximo-testimonial-author">
+              <div class="aximo-testimonial-author-thumb">
+                <img src="{{ url_for('static', filename='assets/images/v1/t_thumb3.png') }}" alt="">
+              </div>
+              <div class="aximo-testimonial-author-data">
+                <p>Pierre Martin <span>Président GIE Agro-Innovation</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="aximo-testimonial-wrap wow fadeInUpX" data-wow-delay="0.4s">
+            <div class="aximo-testimonial-rating">
+              <ul>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+                <li><i class="icon-star"></i></li>
+              </ul>
+            </div>
+            <div class="aximo-testimonial-data">
+              <h3>Un support technique exceptionnel</h3>
+              <p>Au-delà des prédictions précises, c'est l'accompagnement personnalisé qui fait la différence. L'équipe d'AGROLINK comprend vraiment les enjeux du monde agricole et nous aide à tirer le meilleur parti des données.</p>
+            </div>
+            <div class="aximo-testimonial-author">
+              <div class="aximo-testimonial-author-thumb">
+                <img src="{{ url_for('static', filename='assets/images/v1/t_thumb4.png') }}" alt="">
+              </div>
+              <div class="aximo-testimonial-author-data">
+                <p>Sophie Dubois <span>Directrice Technique - Coopérative Bio-Sud</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="aximo-auto-slider-section">
+    <div class="swiper aximo-auto-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Prédictions précises pour vos cultures</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Optimisez vos décisions commerciales</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Analyses en temps réel du marché agricole</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>95% de précision dans nos prédictions</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Alertes personnalisées sur les prix</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Technologie LSTM de pointe</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="aximo-auto-slider-item">
+            <h3>Accompagnement expert personnalisé</h3>
+            <img src="{{ url_for('static', filename='assets/images/v1/star3.png') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+  <div class="section aximo-section-padding3">
+    <div class="container">
+      <div class="aximo-section-title center">
+        <h2>
+        Notre Mini Entreprise
+          <span class="aximo-title-animation">
+            H2J
+            <span class="aximo-title-icon">
+              <img src="{{ url_for('static', filename='assets/images/v1/star2.png') }}" alt="">
+            </span>
+          </span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.1s">
+            <div class="aximo-team-data text-center">
+              <h4>BAPTISTE</h4>
+              <p>1SIO</p>
+              <span class="role">Pôle Production</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.2s">
+            <div class="aximo-team-data text-center">
+              <h4>FADI</h4>
+              <p>1CG</p>
+              <span class="role">Pôle Coordination</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.3s">
+            <div class="aximo-team-data text-center">
+              <h4>MATTIS</h4>
+              <p>1MCO1</p>
+              <span class="role">Pôle Coordination</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.4s">
+            <div class="aximo-team-data text-center">
+              <h4>AURORE</h4>
+              <p>1GPME</p>
+              <span class="role">Pôle Communication</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.5s">
+            <div class="aximo-team-data text-center">
+              <h4>MICKAEL</h4>
+              <p>1NDRC</p>
+              <span class="role">Pôle Marketing</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.6s">
+            <div class="aximo-team-data text-center">
+              <h4>MAROUANE</h4>
+              <p>1SIO</p>
+              <span class="role">Pôle Production</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="aximo-team-wrap wow fadeInUpX" data-wow-delay="0.7s">
+            <div class="aximo-team-data text-center">
+              <h4>MOHAMED-RACHAD</h4>
+              <p>1MCO2</p>
+              <span class="role">Pôle Finance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End section -->
+
+
+
+
+  <!-- Footer  -->
+
+  <footer class="aximo-footer-section dark-bg">
+    <div class="container">
+      <div class="aximo-footer-top aximo-section-padding">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="aximo-default-content light position-relative">
+              <h2>
+                <span class="aximo-title-animation">
+                  Intéressé ? 
+                 
+                </span>
+                 Contactez-nous 
+              </h2>
+              <p>Notre solution d'intelligence artificielle vous permet d'optimiser la gestion de votre exploitation agricole en prenant des décisions éclairées basées sur des données précises et actualisées.</p>
+              <div class="aximo-info-wrap">
+                <div class="aximo-info">
+                  <ul>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Anticipez les variations de prix pour vendre au meilleur moment</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Optimisez vos coûts d'achat d'intrants agricoles</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Recevez des alertes personnalisées sur les opportunités du marché</p>
+                    </li>
+                    <li>
+                      <i class="fas fa-check"></i>
+                      <p>Bénéficiez d'analyses détaillées des tendances du marché</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="aximo-social-icon social-large">
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/" target="_blank">
+                      <i class="icon-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://facebook.com/" target="_blank">
+                      <i class="icon-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                      <i class="icon-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                      <i class="icon-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="aximo-hero-shape aximo-footer-shape">
+                <img src="{{ url_for('static', filename='assets/images/v1/shape1.png') }}" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="aximo-form-wrap">
+              <h4>Envoyez-nous un message</h4>
+              <form action="#">
+                <div class="aximo-form-field">
+                  <input type="text" placeholder="Votre nom">
+                </div>
+                <div class="aximo-form-field">
+                  <input type="email" placeholder="Votre adresse e-mail">
+                </div>
+                <div class="aximo-form-field">
+                  <input type="text" placeholder="+33 6 78 56 34 12">
+                </div>
+                <div class="aximo-form-field">
+                  <textarea name="textarea" placeholder="Ecrivez votre message ici..."></textarea>
+                </div>
+                <button id="aximo-submit-btn" type="submit">Envoyer le message <span><img src="{{ url_for('static', filename='assets/images/icon/arrow-right3.svg') }}" alt=""></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aximo-footer-bottom">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="aximo-footer-logo">
+              <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/images/logo/logo-white.svg') }}" alt="" class="light-version-logo">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-copywright one">
+              <p> &copy; Copyright 2025, All Rights Reserved by Agrolink</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/menu/menu.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/gsap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/countdown.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/wow.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/SplitText.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/ScrollTrigger.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/ScrollSmoother.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/skill-bar.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/infinite-slider.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/image-resizing.js') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='assets/js/scrollsmooth.js') }}"></script> -->
+  <script src="{{ url_for('static', filename='assets/js/faq.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyArZVfNvjnLNwJZlLJKuOiWHZ6vtQzzb1Y"></script>
+
+  <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+
+
+</body>
+</html>

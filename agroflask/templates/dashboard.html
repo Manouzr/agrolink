@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord - AgroLink</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+
+<body class="light">
+  <header class="site-header aximo-header-section aximo-header1 dark-bg" id="sticky-menu">
+    <div class="container">
+      <nav class="navbar site-navbar">
+        <div class="brand-logo">
+          <a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='assets/images/logo/logo-white.svg') }}" alt="" class="light-version-logo">
+          </a>
+        </div>
+        <div class="menu-block-wrapper">
+          <nav class="menu-block">
+            <ul class="site-menu-main">
+              <li class="nav-item">
+                <a href="{{ url_for('index') }}" class="nav-link-item">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('pricing') }}" class="nav-link-item">Tarifs</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('about') }}" class="nav-link-item">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url_for('contact') }}" class="nav-link-item">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-btn">
+          <a href="{{ url_for('logout') }}" class="aximo-default-btn">Se déconnecter</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="aximo-breadcrumb">
+    <div class="container">
+      <h1 class="post__title">Tableau de bord</h1>
+      <p class="welcome-text">Bienvenue, {{ user_name }}!</p>
+    </div>
+  </div>
+
+  <div class="dashboard-content aximo-section-padding">
+    <div class="container">
+      <div class="row">
+        <!-- Statistiques -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="aximo-card">
+            <h4>Prédictions actives</h4>
+            <p class="stat-number">12</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="aximo-card">
+            <h4>Alertes de prix</h4>
+            <p class="stat-number">5</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="aximo-card">
+            <h4>Économies réalisées</h4>
+            <p class="stat-number">2 500€</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="aximo-card">
+            <h4>Précision moyenne</h4>
+            <p class="stat-number">87%</p>
+          </div>
+        </div>
+
+        <!-- Graphique des prix -->
+        <div class="col-lg-8 mb-4">
+          <div class="aximo-card">
+            <h4>Évolution des prix</h4>
+            <canvas id="priceChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Alertes récentes -->
+        <div class="col-lg-4 mb-4">
+          <div class="aximo-card">
+            <h4>Alertes récentes</h4>
+            <ul class="alert-list">
+              <li>Prix du blé en hausse de 5%</li>
+              <li>Nouvelle opportunité : Maïs</li>
+              <li>Prévision : Baisse colza</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Produits suivis -->
+        <div class="col-lg-12">
+          <div class="aximo-card">
+            <h4>Produits suivis</h4>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Produit</th>
+                    <th>Prix actuel</th>
+                    <th>Variation</th>
+                    <th>Prédiction</th>
+                    <th>Confiance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Blé</td>
+                    <td>250€/t</td>
+                    <td class="text-success">+2.5%</td>
+                    <td>Hausse</td>
+                    <td>85%</td>
+                  </tr>
+                  <tr>
+                    <td>Maïs</td>
+                    <td>220€/t</td>
+                    <td class="text-danger">-1.2%</td>
+                    <td>Stable</td>
+                    <td>90%</td>
+                  </tr>
+                  <tr>
+                    <td>Colza</td>
+                    <td>400€/t</td>
+                    <td class="text-success">+3.1%</td>
+                    <td>Hausse</td>
+                    <td>88%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="aximo-footer-section dark-bg">
+    <div class="container">
+      <div class="aximo-footer-bottom">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="aximo-footer-menu">
+              <ul>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Politique de confidentialité</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="aximo-copywright one">
+              <p>&copy; Copyright 2025, All Rights Reserved by Agrolink</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Graphique d'évolution des prix
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin'],
+        datasets: [{
+          label: 'Prix du blé',
+          data: [230, 245, 238, 250, 245, 260],
+          borderColor: '#007bff',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  </script>
+</body>
+
+</html>
