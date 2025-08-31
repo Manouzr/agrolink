@@ -86,10 +86,3 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
-## 📧 Contact
-
-Equipe Agrolink : H2J
-
-## ⭐ Remerciements
-
-Un grand merci à tous les contributeurs et à la communauté agricole pour leur soutien et leurs retours précieux.
