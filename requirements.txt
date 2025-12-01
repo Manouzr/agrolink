@@ -1,6 +1,6 @@
 # Framework web
 Flask==2.0.1
-Werkzeug==2.0.1
+Werkzeug==3.1.4
 
 # Machine Learning et Data Science
 tensorflow==2.15.0
